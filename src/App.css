@@ -1,0 +1,364 @@
+div{
+  height: 100%;
+  /*margin: 0 auto ;*/ 
+  padding: 0px;
+}
+
+.navBar{
+  position: sticky;
+  display: flex;
+  height: 69px;
+  top: 0px;
+  z-index: 10;
+  background-color:whitesmoke;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  justify-content: flex-end;
+}
+
+.searchBar{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin-right: 20px;
+
+}
+
+.input {
+  height: 38px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 17px;
+  transition: all .5s ease-in-out;
+  background-color: #0000001f;
+  padding-right: 40px;
+  color:black;
+  }
+
+.input:focus {
+  outline: none; 
+}
+
+.input::placeholder{
+  color:black;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.buttonSearch{
+  width: 50px;
+  height: 44px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:black ;
+  background-color:transparent;
+  pointer-events: painted;
+  align-items: center; 
+}
+
+.buttonSearch:focus ~ input{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid black;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.input:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid black;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.searchImg {
+  width: 21px;
+  height:21px;
+}
+
+.imagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  overflow:hidden;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 2.5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2.5%;
+}
+
+.loading{
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #828a8f; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin-top: 16em;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  margin: -11px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7%;
+}
+.images {
+  width: 14vw;
+  height: 15vw;
+  margin: 4.5px;
+  border-radius: 10px;
+  transition: 1000ms;
+  aspect-ratio: 2/2;
+}
+
+.imageWrapper:hover .images {
+  filter: blur(5px);
+}
+
+.contentContainer {
+  position: absolute;
+  width: 230px;
+  height: 250px;
+  font-size: 15px;
+}
+
+.contentContainer p {
+  display: block;
+}
+
+.content {
+  opacity: 0;
+  position: absolute;
+  bottom: 40%;
+  left: 0%;
+  right: 0%;
+  padding: 2px 0px;
+  color:white;
+  text-align: center;
+  transition: opacity 500ms;
+}
+
+.location {
+  color: white;
+  bottom: 30%;
+}
+
+.clickFullScreen {
+  color:white;
+  bottom: 25%;
+  border-style: hidden;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.contentContainer:hover .content {
+  opacity: 2.5;
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1450px) {
+  .navBar {
+    height: 50px;
+  }
+
+  .buttonSearch {
+    height:10px;
+    width: 50px;
+  }
+ 
+  .searchImg {
+    width:15px;
+    height:15px;
+  }
+  
+  .input {
+    font-size: 1em;
+    height: 25px;
+    width: 15px;
+  }
+
+  .imagesContainer {
+    width: 80%;
+  }
+
+  .imageWrapper {
+    padding: 1.3%;
+  }
+  .images{
+    width: 18vw;
+    height: 18vw;
+  }
+  .contentContainer{
+    height: 50%;
+    width: 80%;
+    font-size: 15px;
+    justify-content: center;
+    margin:80%;
+  }
+  .location{
+    bottom: 10%;
+  }
+  .clickFullScreen{
+    bottom:5%;
+  }
+}
+@media screen and (min-width: 950px) and (max-width: 1100px) {
+  .navBar {
+    height: 40px;
+  }
+
+  .buttonSearch {
+    height:10px;
+    width: 50px;
+  }
+ 
+  .searchImg {
+    width:15px;
+    height:15px;
+  }
+
+  .input {
+    font-size: 1em;
+    height: 25px;
+  }
+
+  .imagesContainer {
+    width: 80%;
+  }
+
+  .imageWrapper {
+    padding: 1.3%;
+  }
+  .images{
+    width: 20vw;
+    height: 20vw;
+  }
+  .contentContainer{
+    height: 50%;
+    width: 80%;
+    font-size: 15px;
+    justify-content: center;
+    margin:80%;
+  }
+  .location{
+    bottom: 10%;
+  }
+  .clickFullScreen{
+    bottom:5%;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 950px) {
+  
+  .navBar {
+    height: 40px;
+  }
+
+  .buttonSearch {
+    height:10px;
+    width: 50px;
+  }
+ 
+  .searchImg {
+    width:15px;
+    height:15px;
+  }
+
+  .input {
+    font-size: 1em;
+    height: 25px;
+  }
+
+  .imagesContainer {
+    width: 80%;
+  }
+
+  .imageWrapper {
+    padding: 1.3%;
+  }
+  .images{
+    width: 30vw;
+    height: 30vw;
+  }
+  .contentContainer{
+    height: 50%;
+    width: 80%;
+    font-size: 15px;
+    justify-content: center;
+    margin:80%;
+  }
+  .location{
+    bottom: 10%;
+  }
+  .clickFullScreen{
+    bottom:5%;
+  }
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 750px) {
+  .navBar {
+    height: 40px;
+  }
+
+  .buttonSearch {
+    height:10px;
+    width: 50px;
+  }
+ 
+  .searchImg {
+    width:15px;
+    height:15px;
+  }
+  .input {
+    font-size: 1em;
+    height: 25px;
+  }
+
+  .imagesContainer {
+    width: 80%;
+  }
+  .imageWrapper {
+    padding: 2%;
+  }
+  .images{
+    width: 50vw;
+    height: 50vw;
+  }
+  .contentContainer{
+    height: 50%;
+    width: 80%;
+    font-size: 18px;
+    justify-content: center;
+    margin:80%;
+  }
+  .location{
+    bottom: 10%;
+  }
+  .clickFullScreen{
+    bottom:5%;
+  }
+}
