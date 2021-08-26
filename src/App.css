@@ -17,6 +17,14 @@ div{
   justify-content: flex-end;
 }
 
+.title{
+  height: 75%;
+  position: relative;
+  flex: auto;
+  margin-left: 1%;
+  font-size: 22px;
+}
+
 .searchBar{
   width: fit-content;
   height: fit-content;

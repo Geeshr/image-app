@@ -35,6 +35,9 @@ function App() {
     <>
       <div>
         <div className='navBar'>
+          <div className='title'>
+            <p>Geeshni Ramchurn</p>
+          </div>
           <div className='searchBar'>
             <button className='buttonSearch'>
               <img className='searchImg' src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"/>
