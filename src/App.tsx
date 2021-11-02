@@ -1,7 +1,7 @@
 /* eslint-disable require-jsdoc */
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import './App.css';
+import './App.scss';
 
 function App() {
   const [imageResults, setImageResults] = useState<any[]>([]);
@@ -36,7 +36,15 @@ function App() {
       <div>
         <div className='navBar'>
           <div className='title'>
-            <p>Geeshni Ramchurn</p>
+            <div className="wrapper">
+              <span>G</span>
+              <span>E</span>
+              <span>E</span>
+              <span>S</span>
+              <span>H</span>
+              <span>N</span>
+              <span>I</span>
+            </div>
           </div>
           <div className='searchBar'>
             <button className='buttonSearch'>
