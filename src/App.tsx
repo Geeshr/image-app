@@ -44,6 +44,7 @@ function App() {
               <span>H</span>
               <span>N</span>
               <span>I</span>
+
             </div>
           </div>
           <div className='searchBar'>
