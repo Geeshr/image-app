@@ -58,8 +58,9 @@ function App() {
               onChange={(e) => fetchImagesHandler(e.target.value)} />
           </div>
         </div>
-        <div className='imagesContainer'>
-          {isLoading ? <p className='loading'></p> :
+        <div className='card'>
+          <div className='imagesContainer'>
+            {isLoading ? <p className='loading'></p> :
           {imageResults} && imageResults.map((image: any, index: number) =>
             <div className='imageWrapper' key={index}>
               <img className='images'
@@ -81,7 +82,9 @@ function App() {
               </div>
             </div>,
           )}
+          </div>
         </div>
+
       </div>
     </>
   );
